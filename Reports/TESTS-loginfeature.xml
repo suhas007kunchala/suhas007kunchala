@@ -1,0 +1,77 @@
+<testsuite name="loginfeature.TS_103 login into yourlogo" tests="2" errors="1" failures="0" skipped="0" time="133.974641" timestamp="2022-07-11T11:56:34.115104" hostname="IBS-LAP-482"><testcase classname="loginfeature.TS_103 login into yourlogo" name="TC_103 login -- @1.1 " status="passed" time="36.76926"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: TC_103 login -- @1.1 
+    Given yourlogo website "http://automationpractice.com/index.php" is opened ... passed in 11.424s
+    When sign in button is clicked ... passed in 5.097s
+    Then use "gm63@live.com" to enter email ... passed in 5.040s
+    Then use "lkjh1234" to enter password ... passed in 5.046s
+    Then click on sign in button ... passed in 5.110s
+    Then validate login success ... passed in 0.001s
+    And user clicks sign out ... passed in 5.051s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="loginfeature.TS_103 login into yourlogo" name="TC_104 Add-to-cart" status="failed" time="97.205381"><error type="TimeoutError" message="Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for selector &quot;//a[@class='product_img_link']/img[@title='Blouse']&quot;&#10;============================================================">
+<![CDATA[
+Failing step: When user hovers over product ... failed in 30.019s
+Location: loginfeature.feature:22
+Traceback (most recent call last):
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "steps\addtocart_TC_104.py", line 50, in step_impl
+    context.womenpg.hoverover()
+  File "D:\ImpressicoProjects\BehavePlaywrightDemo\PageObjects\yourlogo\MyStore_Womentabpage.py", line 52, in hoverover
+    self.driver.locatorhover(self.productimg, force=True)
+  File "D:\ImpressicoProjects\BehavePlaywrightDemo\helpers\helper_base.py", line 151, in locatorhover
+    self._page.locator(xpath).hover(**kwargs)
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\playwright\sync_api\_generated.py", line 12872, in hover
+    self._sync(
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\playwright\_impl\_sync_base.py", line 88, in _sync
+    return task.result()
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\playwright\_impl\_locator.py", line 281, in hover
+    return await self._frame.hover(
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\playwright\_impl\_frame.py", line 544, in hover
+    await self._channel.send("hover", locals_to_params(locals()))
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\playwright\_impl\_connection.py", line 39, in send
+    return await self.inner_send(method, params, False)
+  File "C:\Users\suhas.kunchala\.virtualenvs\BehavePlaywrightDemo-iLd2CAUR\lib\site-packages\playwright\_impl\_connection.py", line 63, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='product_img_link']/img[@title='Blouse']"
+============================================================
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: TC_104 Add-to-cart
+    Given user is on home page ... passed in 31.777s
+    When user clicks on "women" module ... passed in 5.066s
+    Then user checks tops checkbox ... passed in 5.117s
+    And user selects "In stock" option ... passed in 5.058s
+    And user slides low to "20" and high to "-40" ... passed in 20.168s
+    When user hovers over product ... failed in 30.019s
+    Then user clicks on quick view ... skipped in 0.000s
+    And user selects "1" size option ... skipped in 0.000s
+    And user clicks on Add to cart ... skipped in 0.000s
+    Then user clicks on Proceed to checkout ... skipped in 0.000s
+    Then user checks "summary" and clicks on checkout ... skipped in 0.000s
+    Then user checks Delivery "address" and clicks on checkout ... skipped in 0.000s
+    And user checks i agree in "shipping" details and click on checkout ... skipped in 0.000s
+    Then user clicks on Pay by bank wire ... skipped in 0.000s
+    Then user clicks on I confirm my order ... skipped in 0.000s
+    And user should see order complete message ... skipped in 0.000s
+    Then user clicks on Home button ... skipped in 0.000s
+    Then user vists yourlogo twitter page ... skipped in 0.000s
+    Then user clicks on follow button ... skipped in 0.000s
+    Then user navigates back to yourlogo page ... skipped in 0.000s
+    Then user logout from yourlogo website ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

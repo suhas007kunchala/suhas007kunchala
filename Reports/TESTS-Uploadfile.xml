@@ -1,0 +1,14 @@
+<testsuite name="Uploadfile.upload file to Imgbb" tests="1" errors="0" failures="0" skipped="0" time="23.196909" timestamp="2022-05-09T15:18:59.640807" hostname="IBS-LAP-482"><testcase classname="Uploadfile.upload file to Imgbb" name="TC_105 Upload files -- @1.1 " status="passed" time="23.196909"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: TC_105 Upload files -- @1.1 
+    Given user is on "https://imgbb.com/" ... passed in 12.947s
+    Then user clicks on browse from computer ... passed in 5.059s
+    Then user navigates to "D:\ImpressicoProjects\BehavePlaywrightDemo\Resources\uploadfile.exe" and opens file ... passed in 0.134s
+    Then user clicks on uplode button ... passed in 5.046s
+    Then validate upload complete ... passed in 0.011s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
